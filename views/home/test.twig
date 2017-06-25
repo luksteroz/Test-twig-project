@@ -1,0 +1,19 @@
+{% extends 'layout.twig' %}
+
+{% block title %}{% spaceless %}
+    {{ parent() }} - test page
+{% endspaceless %}{% endblock %}
+
+{% block body %}
+    testowy content <br>
+
+    <ul>
+        {% for page in pages if page > 0 %}
+            <li>{{ page }}</li>
+        {% else %}
+            <li>Nie ma nic :((</li>
+        {% endfor %}
+    </ul>
+
+    {% include 'embed/test.twig' with { action: '/form/logowanie' } %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'layout.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <!-- wewnatrz home/view -->
+{% endblock %}
+
+
+{% block body %}
+    {{ 10 | kwadrat ~ ' :P' | e }}
+    {{ kwadrat(20) }}
+    <!-- tutaj includować wszystko do body -->
+
+{% endblock %}
+
+{% block nav %}
+    <li>nav 3</li>
+{% endblock %}

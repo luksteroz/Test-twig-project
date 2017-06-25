@@ -1,0 +1,19 @@
+<div class="container" id="{{ id }}">
+    {% if hasTop %}
+        <div class="jumbotron">
+            {% block top %}
+                <!-- tutaj mam top -->
+            {% endblock %}
+        </div>
+    {% endif %}
+
+    {% if hasFooter %}
+        <footer>
+            {% block footer %}
+                <!-- tutaj footer -->
+            {% endblock %}
+        </footer>
+    {% endif %}
+</div>
+
+

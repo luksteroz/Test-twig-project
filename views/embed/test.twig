@@ -1,0 +1,8 @@
+{% embed 'embed/block.twig' with { 'id': 'testowe-id' } %}
+    {% set hasFooter = true %}
+    {% set hasTop = false %}
+
+    {% block footer %}
+        ala ma kota a to jest footer!!
+    {% endblock %}
+{% endembed %}

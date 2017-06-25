@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Super title{% endblock %}</title>
+    <!-- komentarz 1 -->
+    {# komentarz 2 #}
+    {# Wszystko co się zaczyna od nawiasu z procentem to znaczy ze zaczyna sie funkcja wew. od Twiga. Podwójne bracketsy to jest wartość tekstowa (wynikiem bedzie tekst lub html) #}
+    <meta property="og:title" content="{{ block('title') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ getAsset('/styles/importer.css') }}">
+
+    {% block stylesheets %}
+        <!-- wewnatrz layout -->
+    {% endblock %}
+
+    {% include 'utils/tags.twig' with { name: 'Janek' } %}
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Strona głowna</li>
+            <li>O nas</li>
+            {% block nav %}{% endblock %}
+        </ul>
+    </nav>
+    {% block body %}
+
+    {% endblock %}
+    <footer>
+        <ul>
+            <li>Strona głowna</li>
+            <li>O nas</li>
+        </ul>
+    </footer>
+</body>
+</html>
