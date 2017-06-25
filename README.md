@@ -1,3 +1,3 @@
-# test-project
+# Test-twig-project
 
-a [Sails](http://sailsjs.org) application
+aTraining with twig and Sail.js
